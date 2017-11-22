@@ -38,8 +38,11 @@ User Interface
 Technical stuff
 ---------------
 
-- self-hosted
+- Self-hosted
 - Written in Go (Golang)
 - Use Postgres as database
 - There are no dependencies, only a single static binary
+- Automatic HTTPS configuration with Let's Encrypt integration
+- Use your own SSL certificate
+- Supports HTTP/2.0 if TLS is configured
 - Feeds are updated in the background by an internal scheduler
