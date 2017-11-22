@@ -9,3 +9,37 @@ Miniflux doesn't use any config file, **only environment variables**.
 - :code:`DATABASE_URL`: Connection URL to connect to Postgresql (default=postgres://postgres:postgres@localhost/miniflux2?sslmode=disable)
 - :code:`DATABASE_MAX_CONNS`: Number of concurrent database connections (default=20)
 - :code:`LISTEN_ADDR`: HTTP server address (default=127.0.0.1:8080)
+- :code:`BASE_URL`: Base URL (default=http://localhost/)
+- :code:`CERT_FILE`: SSL certificate (default="")
+- :code:`KEY_FILE`: SSL private key (default="")
+
+
+HTTPS Configuration
+-------------------
+
+This configuration allows you to use the HTTP/2.0 protocol.
+
+Here an example to generate your self-signed certificate:
+
+.. code:: bash
+
+    # Generate the private key:
+    openssl genrsa -out server.key 2048
+    openssl ecparam -genkey -name secp384r1 -out server.key
+
+    # Generate the certificate:
+    openssl req -new -x509 -sha256 -key server.key -out server.crt -days 3650
+
+Start the server like this:
+
+.. code:: bash
+
+    # Configure the environment variables:
+    export CERT_FILE=/path/to/server.crt
+    export KEY_FILE=/path/to/server.key
+    export LISTEN_ADDR=":https"
+
+    # Start the server:
+    miniflux
+
+Then you can access to your server by using HTTPS.
