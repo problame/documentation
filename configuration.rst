@@ -14,6 +14,10 @@ Miniflux doesn't use any config file, **only environment variables**.
 - :code:`KEY_FILE`: SSL private key (default="")
 - :code:`CERT_DOMAIN`: Use Let's Encrypt to configure automatically a certificate for this domain (default="")
 - :code:`CERT_CACHE`: Let's Encrypt cache directory (default="/tmp/cert_cache")
+- :code:`OAUTH2_PROVIDER`: OAuth2 provider to use, at this time only "google" is supported (default="")
+- :code:`OAUTH2_CLIENT_ID`: OAuth2 client ID (default="")
+- :code:`OAUTH2_CLIENT_SECRET`: OAuth2 client secret (default="")
+- :code:`OAUTH2_REDIRECT_URL`: OAuth2 redirect URL (default="")
 
 Let's Encrypt Integration
 -------------------------
@@ -58,3 +62,26 @@ Start the server like this:
     miniflux
 
 Then you can access to your server by using HTTPS.
+
+OAuth2 Authentication
+---------------------
+
+OAuth2 allows you to sign in with an external provider.
+At this time, only Google is supported.
+
+Google
+~~~~~~
+
+1. Create a new project in Google Console
+2. Create a new OAuth2 client
+3. Set an authorized redirect URL: :code:`https://my.domain.tld/oauth2/google/callback`
+4. Define the OAuth2 environment variables and start the process
+
+.. code:: bash
+
+    export OAUTH2_PROVIDER=google
+    export OAUTH2_CLIENT_ID=replace_me
+    export OAUTH2_CLIENT_SECRET=replace_me
+    export OAUTH2_REDIRECT_URL=https://my.domain.tld/oauth2/google/callback
+
+    miniflux
