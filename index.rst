@@ -12,6 +12,7 @@ Miniflux is a minimalist and opinionated feed reader.
    features
    requirements
    installation
+   upgrade
    configuration
    cli
    keyboard_shortcuts
