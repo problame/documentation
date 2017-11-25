@@ -18,6 +18,7 @@ Miniflux doesn't use any config file, **only environment variables**.
 - :code:`OAUTH2_CLIENT_ID`: OAuth2 client ID (default="")
 - :code:`OAUTH2_CLIENT_SECRET`: OAuth2 client secret (default="")
 - :code:`OAUTH2_REDIRECT_URL`: OAuth2 redirect URL (default="")
+- :code:`OAUTH2_USER_CREATION`: Set to 1 to authorize user creation (default=0)
 
 Let's Encrypt Integration
 -------------------------
@@ -85,3 +86,8 @@ Google
     export OAUTH2_REDIRECT_URL=https://my.domain.tld/oauth2/google/callback
 
     miniflux
+
+Now from the settings page, you can link your existing user to your Google account.
+
+If you would like to authorize anyone to create user account, you must set :code:`OAUTH2_USER_CREATION=1`.
+Since Google do not have the concept of username, the email address is used as username.
