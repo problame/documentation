@@ -8,9 +8,8 @@ Reader
 - OPML import/export
 - Supports enclosures/attachments (Podcasts, videos, music and images)
 - Play videos from YouTube channels directly inside Miniflux
-- Group subscriptions by categories
+- Subscription categories
 - Fetch website icons (favicons)
-- External content is sanitized before being displayed
 
 Privacy
 -------
@@ -19,12 +18,17 @@ Privacy
 - Fetch original links when the feed is coming from FeedBurner
 - Open external links with the attributes :code:`rel="noopener noreferrer" referrerpolicy="no-referrer`
 - Image proxy to avoid mixed content warnings with HTTPS
+- Play Youtube videos by using the domain `youtube-nocookie.com`
+- Block any external Javascript code to avoid tracking
 
 Content Manipulation
 --------------------
 
-- Fetch original web page when only a summary is available
-- Improve article contents (could add image title as caption for comics)
+- Fetch original article and returns relevant contents (Readability)
+- Custom scraper rules based on CSS selectors
+- Custom rewrite rules
+    - Append image title for comics
+    - Add Youtube video
 
 User Interface
 --------------
@@ -33,7 +37,20 @@ User Interface
 - Responsive design (works on desktop, tablet and mobile devices)
 - Doesn't require to download any application from the App/Play Store
 - Keyboard shortcuts
+- Touch events on mobile devices
 - Themes (black and white)
+
+Integrations
+------------
+
+- Send articles to Pinboard or Instapaper
+- Use existing mobile applications to read your feeds by using the Fever API
+
+Authentication
+--------------
+
+- Username/password
+- Google (OAuth2)
 
 Technical stuff
 ---------------
@@ -41,8 +58,11 @@ Technical stuff
 - Self-hosted
 - Written in Go (Golang)
 - Use Postgres as database
-- There are no dependencies, only a single static binary
+- There is no dependency, only a single static binary
 - Automatic HTTPS configuration with Let's Encrypt integration
 - Use your own SSL certificate
 - Supports HTTP/2.0 if TLS is configured
 - Feeds are updated in the background by an internal scheduler
+- External content is sanitized before being displayed
+- Use content security policy that allows only application Javascript and block inline code and styles
+- Works only in modern browsers

@@ -1,7 +1,7 @@
 Keyboard Shortcuts
 ==================
 
-Sections naviguation:
+Sections navigation:
 
 - :code:`g u`: Go to unread page
 - :code:`g h`: Go to history page
@@ -9,7 +9,7 @@ Sections naviguation:
 - :code:`g c`: Go to categories page
 - :code:`g s`: Go to settings page
 
-Items naviguation:
+Items navigation:
 
 - :code:`Left Arrow`: Go to previous item
 - :code:`j`: Go to previous item
@@ -18,7 +18,7 @@ Items naviguation:
 - :code:`k`: Go to next item
 - :code:`n`: Go to next item
 
-Pages naviguation:
+Pages navigation:
 
 - :code:`h`: Go to previous page
 - :code:`l`: Go to next page
@@ -29,6 +29,7 @@ Actions:
 - :code:`v`: Open original link to a new tab
 - :code:`m`: Mark selected item as read/unread
 - :code:`A`: Mark current page as read
+- :code:`d`: Fetch original web page and apply scraper rules or readability
 
 Notes
 -----

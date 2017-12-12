@@ -16,6 +16,9 @@ Miniflux is a minimalist and opinionated feed reader.
    configuration
    cli
    keyboard_shortcuts
+   integrations
+   scraper_rules
+   rewrite_rules
    api
    development
    i18n
