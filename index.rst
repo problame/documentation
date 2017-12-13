@@ -9,6 +9,7 @@ Miniflux is a minimalist and opinionated feed reader.
    :maxdepth: 1
    :caption: Contents:
 
+   opinionated
    features
    requirements
    installation

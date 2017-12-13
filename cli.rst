@@ -29,6 +29,8 @@ Run Database Migrations
     Latest schema version: 1
     Migrating to version: 1
 
+When you run the migrations, make sure that all Miniflux processes are stopped.
+
 Create Admin User
 -----------------
 
