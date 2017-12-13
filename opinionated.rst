@@ -11,6 +11,20 @@ Focus on Simplicity
 - Having a gazillion of features makes the software hard to maintain, hard to troubleshoot and increase the number of bugs.
 - This software doesn't try to satisfy the needs of everyone.
 
+Why the user interface is ugly?
+-------------------------------
+
+- The Miniflux layout is optimized to scan entries quickly.
+- The design of Miniflux is inspired by `Hacker News <https://news.ycombinator.com/>`_, `Lobsters <https://lobste.rs/>`_, `Pinboard <https://pinboard.in/>`_ and `Reddit <https://www.reddit.com/>`_.
+- To be honest, the main developer of Miniflux is not a UI/UX guy.
+
+Why you are not developing my feature request?
+----------------------------------------------
+
+- Developing a software takes a lot of time. Don't expect anyone to work for free.
+- As mentioned above, the number of features is volountary limited. Nobody likes bloatware.
+- Improving existing features is more important than adding new ones.
+
 Why choose Golang as programming language?
 ------------------------------------------
 
