@@ -7,7 +7,9 @@ Fever API
 Miniflux implements the Fever API in addition to its own REST API.
 The Fever API allows you to use existing mobile applications to read your feeds instead of the web user interface.
 
-To activate the Fever API you have to go into the integrations section and choose a username/password.
+To activate the Fever API, go into the integration section and choose a username/password.
+
+.. image:: _static/fever.png
 
 The API endpoint is :code:`https://example.org/fever/`
 
@@ -28,7 +30,9 @@ Pinboard
 
 You could save articles to `Pinboard <https://pinboard.in/>`_.
 
-To activate this service, go to the integrations section and enter your Pinboard API credentials.
+.. image:: _static/pinboard.png
+
+To activate this service, go to the integration section and enter your Pinboard API credentials.
 You must use the API token, not your password.
 
 Instapaper
@@ -36,4 +40,16 @@ Instapaper
 
 You could save articles to `Instapaper <https://www.instapaper.com/>`_.
 
-To activate this service, go to the integrations section and enter your Instapaper credentials.
+.. image:: _static/instapaper.png
+
+To activate this service, go to the integration section and enter your Instapaper credentials.
+
+Wallabag
+--------
+
+`Wallabag <https://wallabag.org/>`_ is a self hostable application for saving web pages.
+
+.. image:: _static/wallabag.png
+
+- The API URL is the root URL of your instance, for example if you have the hosted version use: :code:`https://app.wallabag.it/`.
+- To create a new API client, go to the section "API clients management" and choose "Create a new client".

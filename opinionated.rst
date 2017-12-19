@@ -48,6 +48,7 @@ Miniflux is compatible only with Postgres.
 - Managing schema migrations with Sqlite is painful.
 - Postgresql is powerful, rock solid and battle tested.
 - Postgresql is a great independent open source software.
+- Miniflux uses HSTORE/JSONB data types and handle user timezones with Postgres.
 
 Why no Javascript framework?
 ----------------------------
