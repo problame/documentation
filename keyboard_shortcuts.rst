@@ -4,6 +4,7 @@ Keyboard Shortcuts
 Sections navigation:
 
 - :code:`g u`: Go to unread page
+- :code:`g b`: Go to bookmark page
 - :code:`g h`: Go to history page
 - :code:`g f`: Go to feeds page
 - :code:`g c`: Go to categories page
@@ -30,6 +31,7 @@ Actions:
 - :code:`m`: Mark selected item as read/unread
 - :code:`A`: Mark current page as read
 - :code:`d`: Fetch original web page and apply scraper rules or readability
+- :code:`f`: Star or unstar the current entry
 
 Notes
 -----

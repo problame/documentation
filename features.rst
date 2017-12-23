@@ -8,8 +8,10 @@ Reader
 - OPML import/export
 - Supports enclosures/attachments (Podcasts, videos, music and images)
 - Play videos from YouTube channels directly inside Miniflux
-- Subscription categories
+- Categories
+- Bookmarks
 - Fetch website icons (favicons)
+- Save articles to third-party services
 
 Privacy
 -------
@@ -43,7 +45,7 @@ User Interface
 Integrations
 ------------
 
-- Send articles to Pinboard or Instapaper
+- Send articles to Pinboard, Instapaper or Wallabag
 - Use existing mobile applications to read your feeds by using the Fever API
 
 Authentication

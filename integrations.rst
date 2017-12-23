@@ -21,6 +21,7 @@ Compatible Apps
 Notes
 ~~~~~
 
+- Saving an entry will add a new bookmark and save the article
 - Only the JSON format is supported
 - Refreshing feeds is not possible
 - Links, sparks and kindlings are not supported
