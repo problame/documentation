@@ -98,7 +98,8 @@ List of :code:`Client` methods:
 - :code:`update_category(category_id, title)`
 - :code:`delete_category(category_id)`
 - :code:`get_users()`
-- :code:`get_user(user_id)`
+- :code:`get_user_by_id(user_id)`
+- :code:`get_user_by_username(username)`
 - :code:`create_user(username, password, is_admin)`
 - :code:`update_user(user_id, username=None, password=None, theme=None, language=None, timezone=None, entry_direction=None)`
 - :code:`delete_user(user_id)`
@@ -773,7 +774,11 @@ Request:
 
 .. code::
 
+    # Get user by user ID
     GET /v1/users/270
+
+    # Get user by username
+    GET /v1/users/foobar
 
 Response:
 
