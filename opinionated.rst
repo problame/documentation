@@ -18,7 +18,7 @@ Why the user interface is ugly?
 - The design of Miniflux is inspired by `Hacker News <https://news.ycombinator.com/>`_, `Lobsters <https://lobste.rs/>`_, `Pinboard <https://pinboard.in/>`_ and `Reddit <https://www.reddit.com/>`_.
 - To be honest, the main developer of Miniflux is not a UI/UX guy.
 
-Why you are not developing my feature request?
+Why are you not developing my feature request?
 ----------------------------------------------
 
 - Developing a software takes a lot of time. Don't expect anyone to work for free.

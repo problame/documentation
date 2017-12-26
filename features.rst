@@ -6,7 +6,7 @@ Reader
 
 - Feed formats supported: Atom, RSS 1.0/2.0 and JSON
 - OPML import/export
-- Supports enclosures/attachments (Podcasts, videos, music and images)
+- Support multiple enclosures/attachments (Podcasts, videos, music and images)
 - Play videos from YouTube channels directly inside Miniflux
 - Categories
 - Bookmarks
@@ -18,7 +18,7 @@ Privacy
 
 - Remove pixel trackers
 - Fetch original links when the feed is coming from FeedBurner
-- Open external links with the attributes :code:`rel="noopener noreferrer" referrerpolicy="no-referrer`
+- Open external links with the attributes :code:`rel="noopener noreferrer" referrerpolicy="no-referrer"`
 - Image proxy to avoid mixed content warnings with HTTPS
 - Play Youtube videos by using the domain `youtube-nocookie.com`
 - Block any external Javascript code to avoid tracking

@@ -10,12 +10,14 @@ Requirements
 Checkout the source code
 ------------------------
 
+Create a fork of the project and clone the repository:
+
 .. code:: bash
 
     cd $GOPATH/src
     mkdir -p github.com/miniflux
     cd github.com/miniflux
-    git clone https://github.com/miniflux/miniflux2.git
+    git clone https://github.com/<your_username>/miniflux.git
 
 Build a binary of the application
 ---------------------------------
@@ -48,6 +50,13 @@ To avoid any dependencies, all assets (Javascript, CSS, images, translations) ar
 .. code:: bash
 
     go generate
+
+Linter
+------
+
+.. code:: bash
+
+    make lint
 
 Unit tests
 ----------
