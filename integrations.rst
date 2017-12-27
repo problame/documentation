@@ -17,6 +17,7 @@ Compatible Apps
 ~~~~~~~~~~~~~~~
 
 - `Reeder <http://reederapp.com/>`_ (iOS/Mac OS)
+- `Unread <https://www.goldenhillsoftware.com/unread/>`_ (iOS)
 
 Notes
 ~~~~~

@@ -28,10 +28,13 @@ Build a binary of the application
     make build
 
     # Only Linux
-    make build-linux
+    make linux
+
+    # Build for ARM architectures (32 and 64 bits)
+    make linux-arm
 
     # Only Mac OS
-    make build-darwin
+    make darwin
 
 Run the software locally
 ------------------------
