@@ -9,6 +9,7 @@ Sections navigation:
 - :code:`g f`: Go to feeds page
 - :code:`g c`: Go to categories page
 - :code:`g s`: Go to settings page
+- :code:`?`: Show keyboard shortcuts help
 
 Items navigation:
 
@@ -32,6 +33,7 @@ Actions:
 - :code:`A`: Mark current page as read
 - :code:`d`: Fetch original web page and apply scraper rules or readability
 - :code:`f`: Star or unstar the current entry
+- :code:`Escape`: Close modal dialogs
 
 Notes
 -----
