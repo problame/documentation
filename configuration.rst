@@ -10,6 +10,7 @@ Miniflux doesn't use any config file, **only environment variables**.
 - :code:`DATABASE_MAX_CONNS`: Number of concurrent database connections (default=20)
 - :code:`LISTEN_ADDR`: HTTP server address (default=127.0.0.1:8080)
 - :code:`BASE_URL`: Base URL (default=http://localhost/)
+- :code:`HTTPS`: Force cookies to use secure flag (default is empty, try to detect automatically if HTTPS is used)
 - :code:`CERT_FILE`: SSL certificate (default="")
 - :code:`KEY_FILE`: SSL private key (default="")
 - :code:`CERT_DOMAIN`: Use Let's Encrypt to configure automatically a certificate for this domain (default="")
