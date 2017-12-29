@@ -787,15 +787,53 @@ Response:
     {
         "id": 270,
         "username": "bob",
+        "is_admin": false,
         "language": "en_US",
         "timezone": "UTC",
         "theme": "default",
-        "entry_sorting_direction": "asc"
+        "entry_sorting_direction": "asc",
+        "last_login_at": "2017-12-27T16:40:58.841841-05:00",
+        "extra": {
+            "google_id": "42424242424242"
+        }
     }
 
 Notes:
 
 - You must be administrator to fetch users.
+- The extra field is a dictionary of optional values.
+
+Get Users
+~~~~~~~~~
+
+Request:
+
+.. code::
+
+    GET /v1/users
+
+Response:
+
+.. code:: json
+
+    [
+        {
+            "id": 270,
+            "username": "bob",
+            "is_admin": false,
+            "language": "en_US",
+            "timezone": "UTC",
+            "theme": "default",
+            "entry_sorting_direction": "asc",
+            "last_login_at": "2017-12-27T16:40:58.841841-05:00",
+            "extra": {}
+        }
+    ]
+
+Notes:
+
+- You must be administrator to fetch users.
+- The extra field is a dictionary of optional values.
 
 Delete User
 ~~~~~~~~~~~

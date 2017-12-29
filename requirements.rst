@@ -1,10 +1,17 @@
 Requirements
 ============
 
+Hardware
+--------
+
+- Rasbperry Pi, small virtual machine, Platform as a service...
+- Probably anything that can run Linux
+- x86_64 or ARM architecture
+
 Operating Systems
 -----------------
 
-- GNU/Linux (amd64 or arm64 architecture)
+- GNU/Linux
 - Darwin
 
 Databases

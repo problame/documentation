@@ -12,6 +12,7 @@ Reader
 - Bookmarks
 - Fetch website icons (favicons)
 - Save articles to third-party services
+- Available in English and French
 
 Privacy
 -------
@@ -28,7 +29,7 @@ Content Manipulation
 
 - Fetch original article and returns relevant contents (Readability)
 - Custom scraper rules based on CSS selectors
-- Custom rewrite rules
+- Custom rewriting rules
     - Append image title for comics
     - Add Youtube video
 
@@ -46,7 +47,9 @@ Integrations
 ------------
 
 - Send articles to Pinboard, Instapaper or Wallabag
+- Bookmarklet to subscribe to a website directly from any browsers
 - Use existing mobile applications to read your feeds by using the Fever API
+- REST API with clients written in Go and Python
 
 Authentication
 --------------
@@ -59,9 +62,9 @@ Technical stuff
 
 - Self-hosted
 - Written in Go (Golang)
-- Use Postgres as database
+- Use only Postgres as database
 - There is no dependency, only a single static binary
-- Automatic HTTPS configuration with Let's Encrypt integration
+- Automatic HTTPS configuration with Let's Encrypt
 - Use your own SSL certificate
 - Supports HTTP/2.0 if TLS is configured
 - Feeds are updated in the background by an internal scheduler

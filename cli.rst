@@ -26,8 +26,19 @@ Run Database Migrations
 
     miniflux -migrate
     Current schema version: 0
-    Latest schema version: 1
+    Latest schema version: 12
     Migrating to version: 1
+    Migrating to version: 2
+    Migrating to version: 3
+    Migrating to version: 4
+    Migrating to version: 5
+    Migrating to version: 6
+    Migrating to version: 7
+    Migrating to version: 8
+    Migrating to version: 9
+    Migrating to version: 10
+    Migrating to version: 11
+    Migrating to version: 12
 
 When you run the migrations, make sure that all Miniflux processes are stopped.
 
