@@ -51,6 +51,15 @@ Create Admin User
     Enter Username: root
     Enter Password:
 
+Reset User Password
+-------------------
+
+.. code:: bash
+
+    miniflux -reset-password
+    Enter Username: myusername
+    Enter Password: ****
+
 Flush all Sessions
 ------------------
 

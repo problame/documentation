@@ -63,7 +63,7 @@ Technical stuff
 - Self-hosted
 - Written in Go (Golang)
 - Use only Postgres as database
-- There is no dependency, only a single static binary
+- Single static binary (no more dependencies hell)
 - Automatic HTTPS configuration with Let's Encrypt
 - Use your own SSL certificate
 - Supports HTTP/2.0 if TLS is configured
