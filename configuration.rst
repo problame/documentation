@@ -24,16 +24,18 @@ Miniflux doesn't use any config file, **only environment variables**.
 Let's Encrypt Integration
 -------------------------
 
-You could use Let's Encrypt to handle the SSL certificate automatically and benefits of HTTP/2.0.
+You could use Let's Encrypt to handle the SSL certificate automatically and activate HTTP/2.0.
 
 .. code:: bash
 
     export CERT_DOMAIN=my.domain.tld
     miniflux
 
-- Your server must be reachable on Internet on port 443
+- Your server must be reachable publicly on port 443
 - In this mode, :code:`LISTEN_ADDR` is automatically set to :code:`:https`
 - A cache directory is required, by default :code:`/tmp/cert_cache` is used, it could be overrided by using the variable :code:`CERT_CACHE`
+- In this mode, the Miniflux process must run with a privileged user like root because the listen port is lower than 1024,
+  if you are not comfortable with that, do not use this feature, instead use a reverse proxy like Nginx.
 
 Manual HTTPS Configuration
 --------------------------
