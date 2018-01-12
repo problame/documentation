@@ -38,7 +38,9 @@ User Interface
 
 - Stylesheet optimized for readability
 - Responsive design (works on desktop, tablet and mobile devices)
+- No fancy user interface
 - Doesn't require to download any application from the App/Play Store
+- You could add Miniflux to the home screen
 - Keyboard shortcuts
 - Touch events on mobile devices
 - Themes (black and white)

@@ -15,7 +15,7 @@ Why the user interface is ugly?
 -------------------------------
 
 - The Miniflux layout is optimized to scan entries quickly.
-- The design of Miniflux is inspired by `Hacker News <https://news.ycombinator.com/>`_, `Lobsters <https://lobste.rs/>`_, `Pinboard <https://pinboard.in/>`_ and `Reddit <https://www.reddit.com/>`_.
+- The design of Miniflux is inspired by `Hacker News <https://news.ycombinator.com/>`_, `Lobsters <https://lobste.rs/>`_ and `Pinboard <https://pinboard.in/>`_.
 - To be honest, the main developer of Miniflux is not a UI/UX guy.
 
 Why are you not developing my feature request?
@@ -44,6 +44,7 @@ Why Postgresql?
 Miniflux is compatible only with Postgres.
 
 - Supporting multiple databases increases the complexity of the software.
+- Testing the software with all major versions of Mysql, MariaDB, Sqlite, Postgres is a lot of work.
 - ORM abstracts some interesting features provided your database.
 - Managing schema migrations with Sqlite is painful.
 - Postgresql is powerful, rock solid and battle tested.
@@ -71,9 +72,11 @@ Miniflux uses ES6 and the Fetch API.
 Why there is no mobile application?
 -----------------------------------
 
-Using the web UI on your smartphone is not so bad.
+Using the web UI on your smartphone is not so bad. The stylesheet is responsive and you can even swipe entries.
 
-- Developing a native mobile application takes a lot of time.
+- Developing a native mobile application takes a lot of work.
+- You must know pretty well iOS/Android specific SDKs, languages and frameworks, which is not the case of every body.
+- You must develop your application twice, one for Android and another one for iOS, unless you use some kind of hackish toolkit like React Native or similar.
+- You have to pay a fee to publish your app on the store even if your app doesn't make any money.
 - Big corporations control everything that's happening on their respective store, it's a closed ecosystem.
-- The web is the universal platform and also your app store.
-- Miniflux uses a responsive stylesheet and works pretty well on a smartphone.
+- The web is the universal platform and could be also your app store.
