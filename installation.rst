@@ -1,6 +1,8 @@
 Installation
 ============
 
+You can download pre-compiled Miniflux binaries and packages on the releases page: `<https://github.com/miniflux/miniflux/releases>`_.
+
 Manual Installation
 -------------------
 
