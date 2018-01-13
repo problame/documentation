@@ -694,6 +694,21 @@ Request:
 
     DELETE /v1/categories/802
 
+OPML Export
+~~~~~~~~~~~
+
+Request:
+
+.. code::
+
+    GET /v1/export
+
+The response is a XML document (OPML file).
+
+Notes:
+
+- Available since v2.0.1
+
 Create User
 ~~~~~~~~~~~
 
