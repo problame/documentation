@@ -26,3 +26,4 @@ Miniflux is a minimalist and opinionated feed reader.
    development
    i18n
    migration
+   faq

@@ -25,7 +25,7 @@ Notes
 - Saving an entry will add a new bookmark and save the article
 - Only the JSON format is supported
 - Refreshing feeds is not possible
-- Links, sparks and kindlings are not supported
+- Links, sparks, and kindlings are not supported
 
 Pinboard
 --------
@@ -49,9 +49,9 @@ To activate this service, go to the integration section and enter your Instapape
 Wallabag
 --------
 
-`Wallabag <https://wallabag.org/>`_ is a self hostable application for saving web pages.
+`Wallabag <https://wallabag.org/>`_ is a self-hostable application for saving web pages.
 
 .. image:: _static/wallabag.png
 
-- The API URL is the root URL of your instance, for example if you have the hosted version use: :code:`https://app.wallabag.it/`.
+- The API URL is the root URL of your instance, for example, if you have the hosted version use: :code:`https://app.wallabag.it/`.
 - To create a new API client, go to the section "API clients management" and choose "Create a new client".

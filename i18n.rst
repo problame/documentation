@@ -22,7 +22,7 @@ Plural forms
 
 Some languages have different rules regarding plurals.
 These rules are defined in the file :code:`locale/plurals.go`.
-Your could add more rules if yours is not available.
+You could add more rules if yours is not available.
 
 In the JSON file, a plural translation is defined like that:
 
@@ -60,7 +60,7 @@ Create a fork of the project and clone the repository:
 2) Create a new translation file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- In the folder :code:`locale/translations`, create a new JSON file, for example :code:`de_DE.json` for German.
+- In the folder :code:`locale/translations`, create a new JSON file, for example, :code:`de_DE.json` for German.
 - You could copy the translations from :code:`fr_FR.json` and replace the strings.
 
 3) Add the language to the list

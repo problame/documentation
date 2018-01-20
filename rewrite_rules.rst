@@ -3,7 +3,7 @@ Rewrite Rules
 
 To improve the reading experience, it's possible to alter the content of feed items.
 
-For example, if you are reading a popular comic website like XKCD, it's nice to have to image title (alt attribute) added under the image.
+For example, if you are reading a popular comic website like XKCD, it's nice to have to image title (the `alt` attribute) added under the image.
 Especially on mobile devices when there is no hover event.
 
 List of Rules

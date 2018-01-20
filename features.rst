@@ -6,7 +6,7 @@ Reader
 
 - Feed formats supported: Atom, RSS 1.0/2.0 and JSON
 - OPML import/export
-- Support multiple enclosures/attachments (Podcasts, videos, music and images)
+- Support multiple enclosures/attachments (Podcasts, videos, music, and images)
 - Play videos from YouTube channels directly inside Miniflux
 - Categories
 - Bookmarks
@@ -37,9 +37,9 @@ User Interface
 --------------
 
 - Stylesheet optimized for readability
-- Responsive design (works on desktop, tablet and mobile devices)
+- Responsive design (works on desktop, tablet, and mobile devices)
 - No fancy user interface
-- Doesn't require to download any application from the App/Play Store
+- Doesn't require to download an application from the App/Play Store
 - You could add Miniflux to the home screen
 - Keyboard shortcuts
 - Touch events on mobile devices

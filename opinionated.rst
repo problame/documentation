@@ -22,11 +22,11 @@ Why are you not developing my feature request?
 ----------------------------------------------
 
 - Developing a software takes a lot of time. Don't expect anyone to work for free.
-- As mentioned above, the number of features is volountary limited. Nobody likes bloatware.
+- As mentioned above, the number of features is voluntarily limited. Nobody likes bloatware.
 - Improving existing features is more important than adding new ones.
 
-Why choose Golang as programming language?
-------------------------------------------
+Why choose Golang as a programming language?
+--------------------------------------------
 
 Go is probably the best choice for self-hosted software:
 
@@ -49,7 +49,7 @@ Miniflux is compatible only with Postgres.
 - Managing schema migrations with Sqlite is painful.
 - Postgresql is powerful, rock solid and battle tested.
 - Postgresql is a great independent open source software.
-- Miniflux uses HSTORE/JSONB data types and handle user timezones with Postgres.
+- Miniflux uses HSTORE/JSONB data types and handles user timezones with Postgres.
 
 Why no Javascript framework?
 ----------------------------
@@ -75,8 +75,8 @@ Why there is no mobile application?
 Using the web UI on your smartphone is not so bad. The stylesheet is responsive and you can even swipe entries.
 
 - Developing a native mobile application takes a lot of work.
-- You must know pretty well iOS/Android specific SDKs, languages and frameworks, which is not the case of every body.
+- You must know pretty well iOS/Android specific SDKs, languages and frameworks, which is not the case of everybody.
 - You must develop your application twice, one for Android and another one for iOS, unless you use some kind of hackish toolkit like React Native or similar.
-- You have to pay a fee to publish your app on the store even if your app doesn't make any money.
-- Big corporations control everything that's happening on their respective store, it's a closed ecosystem.
+- You have to pay a fee to publish your app in the store even if your app doesn't make any money.
+- Big corporations control everything that's happening in their respective store, it's a closed ecosystem.
 - The web is the universal platform and could be also your app store.

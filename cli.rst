@@ -42,6 +42,19 @@ Run Database Migrations
 
 When you run the migrations, make sure that all Miniflux processes are stopped.
 
+SQL statements like :code:`create extension if not exists hstore` requires :code:`SUPERUSER` privileges.
+Several solutions are available:
+
+1) Give :code:`SUPERUSER` privileges to miniflux user only during the schema migration:
+
+.. code:: sql
+
+    ALTER USER miniflux WITH SUPERUSER;
+    -- Run the migrations (miniflux -migrate)
+    ALTER USER miniflux WITH NOSUPERUSER;
+
+2) You could create the hstore extension as superuser before to run the migrations.
+
 Create Admin User
 -----------------
 

@@ -13,7 +13,7 @@ Differences between Miniflux 1.2 and Miniflux 2.0
 - Miniflux 2 doesn't use API tokens anymore, for the Fever API, choose your own password and for the REST API use your account password.
 - Miniflux 2 stores favicons into the database instead of using the local filesystem.
 - Miniflux 2 themes are embedded into the application.
-- Miniflux 2 doesn't supports RTL languages.
+- Miniflux 2 doesn't support RTL languages.
 - Miniflux 2 supports only Postgresql.
 - Miniflux 2 is written in Go (Golang) instead of PHP.
 
@@ -28,7 +28,7 @@ Migration Script
 There is a migration script in `Miniflux Legacy repository <https://github.com/miniflux/miniflux-legacy>`_: :code:`scripts/migrate-v2.php`.
 
 - This script requires direct access to the old and the new database.
-- The first group linked to a feed will become the category associated to the imported feed.
+- The first group linked to a feed will become the category associated with the imported feed.
 - Only bookmarked items are migrated.
 - Since entries are not identified in the same way in Miniflux 2, you may have duplicated entries when refreshing your imported feeds.
 
