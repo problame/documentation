@@ -12,7 +12,7 @@ Reader
 - Bookmarks
 - Fetch website icons (favicons)
 - Save articles to third-party services
-- Available in English and French
+- Available in English, French, and German
 
 Privacy
 -------

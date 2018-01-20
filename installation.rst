@@ -31,6 +31,8 @@ When using the Debian package, the Miniflux daemon is supervised by systemd.
 Systemd reads the `environment variables <configuration.html>`_ from the file :code:`/etc/miniflux.conf`.
 You must restart the service to take the new values into consideration.
 
+The files to build the Debian packages are available here: `<https://github.com/miniflux/package-deb>`_.
+
 RPM Package Installation
 ------------------------
 
@@ -46,6 +48,8 @@ When you use the RPM package, the Miniflux daemon is supervised by systemd.
 
 Systemd reads the `environment variables <configuration.html>`_ from the file :code:`/etc/miniflux.conf`.
 You must restart the service to take the new values into consideration.
+
+The files to build the RPM packages are available here: `<https://github.com/miniflux/package-rpm>`_.
 
 Docker Usage
 ------------
@@ -80,3 +84,5 @@ Remember that you still need to run the database migrations and create the first
 
     # Create the first user
     docker exec -ti <container-name> /usr/local/bin/miniflux -create-admin
+
+The Dockerfile is available here: `<https://github.com/miniflux/docker>`_.
