@@ -22,6 +22,22 @@ Miniflux doesn't use any config file, **only environment variables**.
 - :code:`OAUTH2_REDIRECT_URL`: OAuth2 redirect URL (default="")
 - :code:`OAUTH2_USER_CREATION`: Set to 1 to authorize user creation (default=0)
 
+Database Connection Parameters
+------------------------------
+
+Miniflux use the `Golang library pq <https://github.com/lib/pq>`_ to communicate with Postgres.
+Connection parameters are available `on this page <https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters>`_.
+
+The default value for :code:`DATABASE_URL` is :code:`postgres://postgres:postgres@localhost/miniflux2?sslmode=disable`.
+You don't necessary need to use the URL format.
+
+If you would like to connect via a Unix socket, you could do:
+
+.. code:: bash
+
+    export DATABASE_URL="user=postgres password=postgres dbname=miniflux2 sslmode=disable host=/path/to/socket/folder"
+    ./miniflux
+
 Let's Encrypt Integration
 -------------------------
 
