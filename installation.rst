@@ -43,8 +43,9 @@ When you use the RPM package, the Miniflux daemon is supervised by systemd.
 2. Define the environment variable :code:`DATABASE_URL` if necessary
 3. Run the SQL migrations: :code:`miniflux -migrate`
 4. Create an admin user: :code:`miniflux -create-admin`
-5. Start the process with systemd: :code:`systemctl start miniflux`
-6. Check process status: :code:`systemctl status miniflux`
+5. Enable the systemd service: :code:`systemctl enable miniflux`
+6. Start the process with systemd: :code:`systemctl start miniflux`
+7. Check process status: :code:`systemctl status miniflux`
 
 Systemd reads the `environment variables <configuration.html>`_ from the file :code:`/etc/miniflux.conf`.
 You must restart the service to take the new values into consideration.
