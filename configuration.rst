@@ -3,6 +3,7 @@ Configuration
 
 Miniflux doesn't use any config file, **only environment variables**.
 
+- :code:`DEBUG`: Toggle debug output (default is off)
 - :code:`WORKER_POOL_SIZE`: Number of background processes (default=5)
 - :code:`POLLING_FREQUENCY`: Refresh interval in minutes for feeds (default=60)
 - :code:`BATCH_SIZE`: Number of feeds to send to the queue for each interval (default=10)
@@ -21,6 +22,7 @@ Miniflux doesn't use any config file, **only environment variables**.
 - :code:`OAUTH2_CLIENT_SECRET`: OAuth2 client secret (default="")
 - :code:`OAUTH2_REDIRECT_URL`: OAuth2 redirect URL (default="")
 - :code:`OAUTH2_USER_CREATION`: Set to 1 to authorize user creation (default=0)
+- :code:`DISABLE_HSTS`: Disable HTTP Strict Transport Security header (enabled by default if HTTPS)
 
 Database Connection Parameters
 ------------------------------
@@ -38,6 +40,27 @@ If you would like to connect via a Unix socket, you could do:
     export DATABASE_URL="user=postgres password=postgres dbname=miniflux2 sslmode=disable host=/path/to/socket/folder"
     ./miniflux
 
+Running Miniflux on port 443 or 80
+----------------------------------
+
+Ports less than 1024 are reserved for privileged users.
+If you have installed Miniflux with the RPM or Debian package, systemd run the process as the `miniflux` user.
+
+To give Miniflux the ability to bind to privileged ports as a non-root user, add the capability `CAP_NET_BIND_SERVICE` to the binary:
+
+.. code:: bash
+
+    setcap cap_net_bind_service=+ep /usr/bin/miniflux
+
+Check that the capability is added:
+
+.. code:: bash
+
+    getcap /usr/bin/miniflux
+    /usr/bin/miniflux = cap_net_bind_service+ep
+
+Here, we assume you installed the Miniflux binary into /usr/bin.
+
 Let's Encrypt Integration
 -------------------------
 
@@ -48,16 +71,14 @@ You could use Let's Encrypt to handle the SSL certificate automatically and acti
     export CERT_DOMAIN=my.domain.tld
     miniflux
 
-- Your server must be reachable publicly on port 443
+- Your server must be reachable publicly on port 443 and port 80 (http-01 challenge)
 - In this mode, :code:`LISTEN_ADDR` is automatically set to :code:`:https`
 - A cache directory is required, by default :code:`/tmp/cert_cache` is used, it could be overrided by using the variable :code:`CERT_CACHE`
-- In this mode, the Miniflux process must run with a privileged user like root because the listen port is lower than 1024,
-  if you are not comfortable with that, do not use this feature, instead use a reverse proxy like Nginx.
+
+Note: Miniflux supports http-01 challenge since the version 2.0.2
 
 Manual HTTPS Configuration
 --------------------------
-
-This configuration allows you to use the HTTP/2.0 protocol.
 
 Here an example to generate your self-signed certificate:
 
@@ -82,7 +103,7 @@ Start the server like this:
     # Start the server:
     miniflux
 
-Then you can access to your server by using HTTPS.
+Then you can access to your server by using an encrypted connection with the HTTP/2.0 protocol.
 
 OAuth2 Authentication
 ---------------------
@@ -111,3 +132,32 @@ Now from the settings page, you can link your existing user to your Google accou
 
 If you would like to authorize anyone to create user account, you must set :code:`OAUTH2_USER_CREATION=1`.
 Since Google do not have the concept of username, the email address is used as username.
+
+Reverse-Proxy Configuration with Subfolder
+------------------------------------------
+
+Since the version 2.0.2, you can host your Miniflux instance under a subfolder.
+
+You must define the environment variable :code:`BASE_URL` for Miniflux, for example:
+
+.. code:: bash
+
+    export BASE_URL=http://example.org/rss/
+
+You can use the reverse-proxy software of your choice, here an example with Nginx:
+
+.. code:: bash
+
+    location /rss/ {
+        proxy_pass http://127.0.0.1:8080/rss/;
+        proxy_set_header Host $host;
+        proxy_redirect off;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+This example assume that you are running the Miniflux daemon on `127.0.0.1:8080`.
+
+Now you can access to your Miniflux instance at `http://example.org/rss/`.
+In this configuration, cookies are using the path `/rss`.

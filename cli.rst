@@ -19,6 +19,15 @@ Show Build Information
     Build Date: 2017-11-20T22:45:00
     Go Version: go1.9
 
+Enable Debug Mode
+-----------------
+
+.. code:: bash
+
+    miniflux -debug
+    [2018-02-05T02:38:32] [INFO] Debug mode enabled
+    [2018-02-05T02:38:32] [INFO] Starting Miniflux...
+
 Run Database Migrations
 -----------------------
 
