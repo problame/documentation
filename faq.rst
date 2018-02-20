@@ -19,6 +19,13 @@ Why are you not developing my feature request?
 - As mentioned above, the number of features is voluntarily limited. Nobody likes bloatware.
 - Improving existing features is more important than adding new ones.
 
+Why Miniflux stores favicons into the database?
+-----------------------------------------------
+
+Miniflux follows the `the Twelve Factors principle <https://12factor.net/>`_.
+Nothing is stored on the local file system.
+The application is designed to run on ephemeral containers without persistent storage.
+
 How to create themes for Miniflux 2?
 ------------------------------------
 
@@ -50,3 +57,8 @@ What "Flush History" does?
 
 "Flush History" changes the status of entries from "read" to "removed" (except for bookmarks).
 Entries with the status "removed" are not visible in the user interface.
+
+Is there any browser extensions for Miniflux?
+---------------------------------------------
+
+- `<https://github.com/modInfo/miniflux-chrome-notifier>`_
