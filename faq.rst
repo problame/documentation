@@ -61,4 +61,4 @@ Entries with the status "removed" are not visible in the user interface.
 Is there any browser extensions for Miniflux?
 ---------------------------------------------
 
-- `<https://github.com/modInfo/miniflux-chrome-notifier>`_
+- Miniflux Notifications: `Chrome Web Store <https://chrome.google.com/webstore/detail/miniflux-notifications/jpeplhckmjlpahnkpblakfligkbfefkg>`_ - `Source Code <https://github.com/modInfo/miniflux-chrome-notifier>`_
