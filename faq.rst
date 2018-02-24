@@ -62,3 +62,9 @@ Is there any browser extensions for Miniflux?
 ---------------------------------------------
 
 - Miniflux Notifications: `Chrome Web Store <https://chrome.google.com/webstore/detail/miniflux-notifications/jpeplhckmjlpahnkpblakfligkbfefkg>`_ - `Source Code <https://github.com/modInfo/miniflux-chrome-notifier>`_
+
+Which binary do I need to use on my Raspberry Pi?
+-------------------------------------------------
+
+- Raspberry Pi A, A+, B, B+, Zero: :code:`miniflux-linux-armv6` compiled with :code:`GOARM=6`
+- Raspberry Pi 2, 3: :code:`miniflux-linux-armv7` compiled with :code:`GOARM=7`
