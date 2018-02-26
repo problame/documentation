@@ -48,7 +48,7 @@ User Interface
 Integrations
 ------------
 
-- Send articles to Pinboard, Instapaper or Wallabag
+- Send articles to Pinboard, Instapaper, Wallabag, or Nunux Keeper
 - Bookmarklet to subscribe to a website directly from any browsers
 - Use existing mobile applications to read your feeds by using the Fever API
 - REST API with clients written in Go and Python

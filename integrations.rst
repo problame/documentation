@@ -55,3 +55,16 @@ Wallabag
 
 - The API URL is the root URL of your instance, for example, if you have the hosted version use: :code:`https://app.wallabag.it/`.
 - To create a new API client, go to the section "API clients management" and choose "Create a new client".
+
+Nunux Keeper
+------------
+
+`Nunux Keeper <https://keeper.nunux.org/>`_ is a *"personal content curation service"*.
+It's an alternative to Pocket or Wallabag.
+
+.. image:: _static/nunux_reader.png
+
+- The API URL is the root URL of your instance, for example, if you are using the hosted version: :code:`https://api.nunux.org/keeper`.
+- To create a new API key, go to the settings tab: "API key" and choose "Regenerate API key".
+
+.. image:: _static/nunux_reader_api_key.png
