@@ -22,11 +22,11 @@ Databases
 Web Browsers
 ------------
 
-A browser compatible with ECMAScript 6 is required.
+A browser compatible with **ECMAScript 6 is required**.
 
 - Mozilla Firefox
 - Chrome
 - Safari
 - Microsoft Edge
 
-*Internet Explorer 11 is not supported.*
+.. warning:: Internet Explorer 11 is not supported.

@@ -19,13 +19,11 @@ Compatible Apps
 - `Reeder <http://reederapp.com/>`_ (iOS/Mac OS)
 - `Unread <https://www.goldenhillsoftware.com/unread/>`_ (iOS)
 
-Notes
-~~~~~
-
-- Saving an entry will add a new bookmark and save the article
-- Only the JSON format is supported
-- Refreshing feeds is not possible
-- Links, sparks, and kindlings are not supported
+.. note::
+    - Saving an entry will add a new bookmark and save the article
+    - Only the JSON format is supported
+    - Refreshing feeds is not possible with Reeder because no user information is sent
+    - Links, sparks, and kindlings are not supported
 
 Pinboard
 --------

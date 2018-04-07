@@ -40,6 +40,10 @@ If you would like to connect via a Unix socket, you could do:
     export DATABASE_URL="user=postgres password=postgres dbname=miniflux2 sslmode=disable host=/path/to/socket/folder"
     ./miniflux
 
+.. warning:: Password that contains special characters like ``^`` might be rejected since Miniflux 2.0.3.
+             Golang v1.10 is `now validating the password <https://go-review.googlesource.com/c/go/+/87038>`_ and will return this error: ``net/url: invalid userinfo``.
+             To avoid this issue, do not use the URL format for ``DATABASE_URL`` or make sure the password is URL encoded.
+
 Running Miniflux on port 443 or 80
 ----------------------------------
 
@@ -75,7 +79,7 @@ You could use Let's Encrypt to handle the SSL certificate automatically and acti
 - In this mode, :code:`LISTEN_ADDR` is automatically set to :code:`:https`
 - A cache directory is required, by default :code:`/tmp/cert_cache` is used, it could be overrided by using the variable :code:`CERT_CACHE`
 
-Note: Miniflux supports http-01 challenge since the version 2.0.2
+.. note:: Miniflux supports http-01 challenge since the version 2.0.2
 
 Manual HTTPS Configuration
 --------------------------

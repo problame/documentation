@@ -345,10 +345,10 @@ Request:
 
     PUT /v1/feeds/42/refresh
 
-Notes:
+.. note::
 
-- Returns :code:`204` status code for success.
-- This API call is synchronous and can takes hundred of milliseconds.
+    - Returns :code:`204` status code for success.
+    - This API call is synchronous and can takes hundred of milliseconds.
 
 Remove Feed
 ~~~~~~~~~~~
@@ -378,6 +378,7 @@ Response:
         "feed_id": 42,
         "title": "Entry Title",
         "url": "http://example.org/article.html",
+        "comments_url": "",
         "author": "Foobar",
         "content": "<p>HTML contents</p>",
         "hash": "29f99e4074cdacca1766f47697d03c66070ef6a14770a1fd5a867483c207a1bb",
@@ -410,6 +411,10 @@ Response:
         }
     }
 
+.. note::
+
+    - The field ``comments_url`` is available since version 2.0.5
+
 Get Entry
 ~~~~~~~~~
 
@@ -429,6 +434,7 @@ Response:
         "feed_id": 42,
         "title": "Entry Title",
         "url": "http://example.org/article.html",
+        "comments_url": "",
         "author": "Foobar",
         "content": "<p>HTML contents</p>",
         "hash": "29f99e4074cdacca1766f47697d03c66070ef6a14770a1fd5a867483c207a1bb",
@@ -491,6 +497,7 @@ Response:
                 "feed_id": 42,
                 "title": "Entry Title",
                 "url": "http://example.org/article.html",
+                "comments_url": "",
                 "author": "Foobar",
                 "content": "<p>HTML contents</p>",
                 "hash": "29f99e4074cdacca1766f47697d03c66070ef6a14770a1fd5a867483c207a1bb",
@@ -554,6 +561,7 @@ Response:
                 "feed_id": 42,
                 "title": "Entry Title",
                 "url": "http://example.org/article.html",
+                "comments_url": "",
                 "author": "Foobar",
                 "content": "<p>HTML contents</p>",
                 "hash": "29f99e4074cdacca1766f47697d03c66070ef6a14770a1fd5a867483c207a1bb",
@@ -602,9 +610,9 @@ Request:
         "status": "read"
     }
 
-Notes:
+.. note::
 
-- Returns :code:`204` status code for success.
+    - Returns :code:`204` status code for success.
 
 Toggle Entry Bookmark
 ~~~~~~~~~~~~~~~~~~~~~
@@ -615,9 +623,9 @@ Request:
 
     PUT /v1/entries/1234/bookmark
 
-Notes:
+.. note::
 
-- Returns :code:`204` status code for success.
+    - Returns :code:`204` status code for success.
 
 Get Categories
 ~~~~~~~~~~~~~~
@@ -705,9 +713,9 @@ Request:
 
 The response is a XML document (OPML file).
 
-Notes:
+.. note::
 
-- Available since v2.0.1
+    - This API call is available since Miniflux v2.0.1
 
 Create User
 ~~~~~~~~~~~
@@ -738,9 +746,9 @@ Response:
         "entry_sorting_direction": "asc"
     }
 
-Notes:
+.. note::
 
-- You must be administrator to create users.
+    - You must be administrator to create users.
 
 Update User
 ~~~~~~~~~~~
@@ -778,9 +786,9 @@ Response:
         "entry_sorting_direction": "asc"
     }
 
-Notes:
+.. note::
 
-- You must be administrator to update users.
+    - You must be administrator to update users.
 
 Get User
 ~~~~~~~~
@@ -813,10 +821,10 @@ Response:
         }
     }
 
-Notes:
+.. note::
 
-- You must be administrator to fetch users.
-- The extra field is a dictionary of optional values.
+    - You must be administrator to fetch users.
+    - The extra field is a dictionary of optional values.
 
 Get Users
 ~~~~~~~~~
@@ -845,10 +853,10 @@ Response:
         }
     ]
 
-Notes:
+.. note::
 
-- You must be administrator to fetch users.
-- The extra field is a dictionary of optional values.
+    - You must be administrator to fetch users.
+    - The extra field is a dictionary of optional values.
 
 Delete User
 ~~~~~~~~~~~
@@ -859,6 +867,6 @@ Request:
 
     DELETE /v1/users/270
 
-Notes:
+.. note::
 
-- You must be administrator to delete users.
+    - You must be administrator to delete users.

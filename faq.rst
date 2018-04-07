@@ -68,3 +68,23 @@ Which binary do I need to use on my Raspberry Pi?
 
 - Raspberry Pi A, A+, B, B+, Zero: :code:`miniflux-linux-armv6` compiled with :code:`GOARM=6`
 - Raspberry Pi 2, 3: :code:`miniflux-linux-armv7` compiled with :code:`GOARM=7`
+
+Why there is no latest tag on the Docker image?
+-----------------------------------------------
+
+- There is no latest tag to avoid people updating blindly the software
+  to a new version without reading the ChangeLog and without looking to
+  the possible breaking changes.
+- This is also to avoid people reporting bugs on the "latest" version,
+  the latest tag is a moving target, this 2.0.4 today but it will be 2.0.5 another day.
+  Having a bug reports that say "That doesn't work with latest version" doesn't really help.
+- Latest tag or not, you still need to destroy the current container and start a new one with the desired image.
+- Using the latest tag is error prone, it doesn't means you are on the latest version,
+  especially if you forget to pull the image. By pinning the exact version you avoid surprises.
+
+Why migrations are not executed automatically?
+----------------------------------------------
+
+- Because it's a source of problems.
+- Only one process should manipulate the database schema at the time.
+- If you run multiples containers with an orchestrator that may cause issues.

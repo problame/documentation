@@ -33,6 +33,8 @@ Run Database Migrations
 
 .. code:: bash
 
+    export DATABASE_URL=replace_me
+
     miniflux -migrate
     Current schema version: 0
     Latest schema version: 12
@@ -51,7 +53,7 @@ Run Database Migrations
 
 When you run the migrations, make sure that all Miniflux processes are stopped.
 
-SQL statements like :code:`create extension if not exists hstore` requires :code:`SUPERUSER` privileges.
+Creating extensions requires :code:`SUPERUSER` privileges.
 Several solutions are available:
 
 1) Give :code:`SUPERUSER` privileges to miniflux user only during the schema migration:
@@ -63,6 +65,10 @@ Several solutions are available:
     ALTER USER miniflux WITH NOSUPERUSER;
 
 2) You could create the hstore extension as superuser before to run the migrations.
+
+.. warning:: Password that contains special characters like ``^`` might be rejected since Miniflux 2.0.3.
+             Golang v1.10 is `now validating the password <https://go-review.googlesource.com/c/go/+/87038>`_ and will return this error: ``net/url: invalid userinfo``.
+             To avoid this issue, do not use the URL format for ``DATABASE_URL`` or make sure the password is URL encoded.
 
 Create Admin User
 -----------------

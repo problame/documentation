@@ -35,8 +35,5 @@ Actions:
 - :code:`f`: Star or unstar the current entry
 - :code:`Escape`: Close modal dialogs
 
-Notes
------
-
-- Mozilla Firefox will block the opening of a new tab if you use the shortcut :code:`v`.
-  You must authorize Miniflux to open new tabs in your Firefox settings.
+.. note:: Mozilla Firefox will block the opening of a new tab if you use the shortcut :code:`v`.
+          You must authorize Miniflux to open new tabs in your Firefox settings.
