@@ -15,6 +15,7 @@ Miniflux is a minimalist and opinionated feed reader.
    requirements
    installation
    upgrade
+   tutorials
    configuration
    cli
    usage
