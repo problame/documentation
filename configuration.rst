@@ -23,6 +23,10 @@ Miniflux doesn't use any config file, **only environment variables**.
 - :code:`OAUTH2_REDIRECT_URL`: OAuth2 redirect URL (default="")
 - :code:`OAUTH2_USER_CREATION`: Set to 1 to authorize user creation (default=0)
 - :code:`DISABLE_HSTS`: Disable HTTP Strict Transport Security header (enabled by default if HTTPS)
+- :code:`RUN_MIGRATIONS`: Run database migrations, set to value to ``1`` (default="")
+- :code:`CREATE_ADMIN`: Create admin user automatically, set value to ``1`` (default="")
+- :code:`ADMIN_USERNAME`: Admin user login, used only if ``CREATE_ADMIN`` is enabled (default="")
+- :code:`ADMIN_PASSWORD`: Admin user password, used only if ``CREATE_ADMIN`` is enabled (default="")
 
 Database Connection Parameters
 ------------------------------

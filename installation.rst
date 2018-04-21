@@ -62,12 +62,14 @@ You could also use Docker Compose. Here an example of :code:`docker-compose.yml`
 
 .. code:: yaml
 
-    version: '2'
+    version: '3'
     services:
       miniflux:
-        image: miniflux/miniflux:replace-me
+        image: miniflux/miniflux:2.0.6
         ports:
           - "80:8080"
+        depends_on:
+          - db
         environment:
           - DATABASE_URL=postgres://miniflux:secret@db/miniflux?sslmode=disable
       db:
@@ -75,6 +77,7 @@ You could also use Docker Compose. Here an example of :code:`docker-compose.yml`
         environment:
           - POSTGRES_USER=miniflux
           - POSTGRES_PASSWORD=secret
+
 
 Remember that you still need to run the database migrations and create the first user:
 
@@ -87,3 +90,5 @@ Remember that you still need to run the database migrations and create the first
     docker exec -ti <container-name> /usr/local/bin/miniflux -create-admin
 
 The Dockerfile is available here: `<https://github.com/miniflux/docker>`_.
+
+Another way of doing the same thing, is to populate the variables ``RUN_MIGRATIONS``, ``CREATE_ADMIN``, ``ADMIN_USERNAME`` and ``ADMIN_PASSWORD``.

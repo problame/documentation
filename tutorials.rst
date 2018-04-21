@@ -1,6 +1,116 @@
 Installation Tutorials
 ======================
 
+Here are a couple of tutorials to help you to install Miniflux.
+
+Installing Miniflux on your own server
+--------------------------------------
+
+This example is for **Ubuntu 16.04**.
+Let's say you want to install Miniflux on a VPS.
+
+1. Install Postgresql: ``apt install postgresql``
+2. Prepare the database:
+
+.. code:: bash
+
+    # Switch to the postgres user
+    $ su - postgres
+
+    # Create a database user for Miniflux
+    $ createuser -P miniflux
+    Enter password for new role: ******
+    Enter it again: ******
+
+    # Create a database for miniflux that belongs to our user
+    $ createdb -O miniflux miniflux
+
+    # Create the extension hstore as superuser
+    $ psql miniflux -c 'create extension hstore'
+    CREATE EXTENSION
+
+3. Install Miniflux:
+
+.. code:: bash
+
+    # Download the latest Debian package from the release page
+    # In this example, this is the version 2.0.5
+    $ wget https://github.com/miniflux/miniflux/releases/download/2.0.5/miniflux_2.0.5_amd64.deb
+
+    # Install the package
+    $ dpkg -i miniflux_2.0.5_amd64.deb
+
+    # Run the SQL migrations
+    $ export DATABASE_URL=postgres://miniflux:secret@localhost/miniflux?sslmode=disable
+    $ miniflux -migrate
+    Current schema version: 0
+    Latest schema version: 16
+    Migrating to version: 1
+    Migrating to version: 2
+    Migrating to version: 3
+    [...]
+
+    # Create the first user
+    $ miniflux -create-admin
+    Enter Username: superman
+    Enter Password: ******
+
+    # Update the config file /etc/miniflux.conf
+    # Add/Edit this lines:
+    # DATABASE_URL=postgres://miniflux:secret@localhost/miniflux?sslmode=disable
+    # LISTEN_ADDR=0.0.0.0:80
+    $ vim /etc/miniflux.conf
+
+    # Authorize Miniflux to listen on port 80
+    $ setcap cap_net_bind_service=+ep /usr/bin/miniflux
+
+    # Restart the process to take the new config values into consideration
+    systemctl restart miniflux
+
+    # Check the logs to make sure the process is running properly
+    $ journalctl -u miniflux
+    [INFO] Starting Miniflux...
+    [INFO] [Worker] #0 started
+    [INFO] [Worker] #1 started
+    [INFO] [Worker] #2 started
+    [INFO] [Worker] #3 started
+    [INFO] Listening on "0.0.0.0:80" without TLS
+
+4. Now, you can access to your Miniflux instance via ``http://your-server/``
+
+Running Miniflux with Docker Compose
+------------------------------------
+
+You could use Docker to try quickly Miniflux on your local machine:
+
+Create a ``docker-compose.yml`` file into a folder called ``miniflux`` for example.
+
+.. code::
+
+    version: '3'
+    services:
+      miniflux:
+        image: miniflux/miniflux:2.0.6
+        ports:
+          - "80:8080"
+        depends_on:
+          - db
+        environment:
+          - DATABASE_URL=postgres://miniflux:secret@db/miniflux?sslmode=disable
+          - RUN_MIGRATIONS=1
+          - CREATE_ADMIN=1
+          - ADMIN_USERNAME=admin
+          - ADMIN_PASSWORD=test123
+      db:
+        image: postgres:10.1
+        environment:
+          - POSTGRES_USER=miniflux
+          - POSTGRES_PASSWORD=secret
+
+Then run ``docker-compose up`` and go to ``http://localhost/``.
+
+After the first user has been created, you should remove the variables ``CREATE_ADMIN``, ``ADMIN_USERNAME`` and ``ADMIN_PASSWORD``.
+
 Deploying Miniflux on Heroku
 ----------------------------
 
