@@ -64,7 +64,12 @@ Several solutions are available:
     -- Run the migrations (miniflux -migrate)
     ALTER USER miniflux WITH NOSUPERUSER;
 
-2) You could create the hstore extension as superuser before to run the migrations.
+2) You could `create the hstore extension <https://www.postgresql.org/docs/current/static/sql-createextension.html>`_ as a postgres user with ``SUPERUSER`` privileges before to run the migrations.
+
+.. code::
+
+    sudo -u postgres psql $MINIFLUX_DATABASE
+    > CREATE EXTENSION hstore;
 
 .. warning:: Password that contains special characters like ``^`` might be rejected since Miniflux 2.0.3.
              Golang v1.10 is `now validating the password <https://go-review.googlesource.com/c/go/+/87038>`_ and will return this error: ``net/url: invalid userinfo``.
