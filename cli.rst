@@ -53,6 +53,8 @@ Run Database Migrations
 
 When you run the migrations, make sure that all Miniflux processes are stopped.
 
+.. _migrations-superuser:
+
 Creating extensions requires :code:`SUPERUSER` privileges.
 Several solutions are available:
 

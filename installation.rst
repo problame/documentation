@@ -9,9 +9,10 @@ Manual Installation
 1. Copy the binary somewhere
 2. Make the file executable: :code:`chmod +x miniflux`
 3. Define the environment variable :code:`DATABASE_URL` if necessary
-4. Run the SQL migrations: :code:`miniflux -migrate`
-5. Create an admin user: :code:`miniflux -create-admin`
-6. Start the application: :code:`miniflux`
+4. ``CREATE EXTENSION hstore`` in the database or specify a user with ``SUPERUSER`` privileges. (:ref:`Details <migrations-superuser>`)
+5. Run the SQL migrations: :code:`miniflux -migrate`
+6. Create an admin user: :code:`miniflux -create-admin`
+7. Start the application: :code:`miniflux`
 
 You should configure a process manager like systemd or supervisord to supervise the Miniflux daemon.
 The Debian or RPM packages are doing that for you.
